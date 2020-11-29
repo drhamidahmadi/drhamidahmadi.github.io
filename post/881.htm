@@ -1,0 +1,1204 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://dr_ahmadi.mihanblog.com/xmlrpc?rsd" />
+<script type="text/javascript" src="http://static.mihanblog.com//public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('9 آذر 99');
+		/*224794*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="https://plus.sabavision.com/dox/dox.min.css">
+        <script src="https://plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1019');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','29 شهریور 99');
+	
+	setStatVar('today_view','13895');
+	setStatVar('yesterday_view','444');
+	
+	setStatVar('this_month_view','27317');
+	setStatVar('last_month_view','12326');
+
+	setStatVar('total_view','5911212');
+	setStatVar('last_view_date','9 آذر 99 (16:33)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://dr_ahmadi.mihanblog.com/statupdate/?data[refereruri]=http://dr_ahmadi.mihanblog.com/post/&data[postid]=881&data[requesturi]=/post/881&data[sdate]=1606655146&data[hash]=47961e847c6dad9a9bc2fe8ff947f313&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[881]='108';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[881]='182';
+mihanblogDisLikeArrCnt[881]='72';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('/public/public/fonts/Iransans.eot');
+            src: url('/public/public/fonts/Iransans.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('/public/public/fonts/Iransans.woff') format('woff'),
+            url('/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('/public/public/fonts/Iransans-Black.eot');
+            src: url('/public/public/fonts/Iransans-Black.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('/public/public/fonts/Iransans-UltraLight.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('/public/public/fonts/Nassim.eot');
+            src: url('/public/public/fonts/Nassim.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('/public/public/fonts/Nassim.woff') format('woff'),
+            url('/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('/public/public/fonts/Koodak.eot');
+            src: url('/public/public/fonts/Koodak.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('/public/public/fonts/Koodak.woff') format('woff'),
+            url('/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('/public/public/fonts/Yekan.eot');
+            src: url('/public/public/fonts/Yekan.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('/public/public/fonts/Yekan.woff') format('woff'),
+            url('/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('/public/public/fonts/fontawesome_webfont.eot');
+            src: url('/public/public/fonts/fontawesome_webfont.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content="هیس...بچه موز خوابه "/>
+    <meta name="keywords" content="هیس,بچه,موز,خوابه,"/>
+    <link rel="alternate" type="application/rss+xml" title="وب نوشته های یك جراح" href="/post/rss/" />
+    <link rel="alternate" type="application/atom+xml" title="وب نوشته های یك جراح" href="/post/atom/" />
+    <link href="http://mihanblog.com/public/public/user_data/template/2099141/style.css" type="text/css" rel="stylesheet">
+
+    <title>وب نوشته های یك جراح - هیس...بچه موز خوابه </title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div02>&nbsp;</td>
+<td class=div70 valign=top><div class=div71></div></td>
+
+<td class=div2 valign=top>
+<div class=div1>
+
+<div class=div20>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="/post/881">هیس...بچه موز خوابه </a></font></div>
+            <div class=div58><font class=text7>11 تیر 93 :: نویسنده : <a href="/post/author/127594">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+
+<div style="text-align: justify;"><span style="font-size: small;">ازون جایی که بنده همش دنبال سوژه برای عکاسی و این حرفام چند وقت پیش که رفته بودم یه بیمارستانی تا یکی از دوستام رو ببینم دیدم یه نوشته ای جلوی در بیمارستان زدن و منظورشونم این بود آقا اینجا ما داریم زندگی می کنیم شلوغ پلوغ نکنین بعد من خوندم دیدم ای بابا عجب سوتی داده طرف می خواسته بگه اینجا آدم مریض داریم و مسن. نوشته " اینجا همگی سالِمَنْد و &nbsp;مریض می باشند " بعد از این که کلی به نویسنده خندیدم سریع عکسم گرفتم . بعد که اومدم بیمارستان خودمون به یکی از دوستام این سوتی ارزشمند رو نشون دادم . بعد دوستم یه نگاه همچنین پرمعنایی به ما انداخت و گفت. « شما خوبی الحمدلله ؟ » بنده هم عرض کردم به مرحمت شما. بعد ایشون فرمودند «آی کیو اینجا نوشته همه سالْمَند و مریض ..یعنی پیرمرد پیرزن اینجاست». بعد بنده در کمال ناباوری فهمیدم که عجب سوتی دادم.</span><a href="http://s5.picofile.com/file/8128465568/salmand.jpg" target="_blank" title=""><font color="#ff0000" size="2">اینم عکسش</font></a><span style="font-size: small;">&nbsp;و در پایان خواستیم شما رو در این سوتی شریک کنیم و اینم آخر و عاقبت کسی که همش چشش دنبال سوژس . البته خوب همیشه که سوتی درست نمیشه بعضی وقتا هم یه سری آدم خوش ذوق رو می بینی که تو محل کارشون&nbsp;</span><a href="http://s5.picofile.com/file/8128467426/%D8%B9%D8%B0%D8%B1%D8%AE%D9%88%D8%A7%D9%87%DB%8C_%D9%88_%D8%BA%D8%B1%D9%88%D8%B1.jpg" target="_blank" title=""><font color="#ff0000" size="2">ازینا</font></a><span style="font-size: small;">&nbsp;زدن. واقعاً جمله تاثیرگذاری بود خیلی قبولش دارم.</span><span style="font-size: small;">&nbsp;یه بچه موز پیدا کردم گذاشتمش کف دستم به انگشتام گفتم براش لالایی بخونن خوابش ببره بعد ازشون عکس گرفتم .این شد&nbsp;</span><a href="http://s5.picofile.com/file/8128465634/bachemoz.jpg" target="_blank" title="" style="font-size: 11px;"><font color="#ff0000" size="2">محصول نهایی</font></a><span style="font-size: small;">&nbsp;و اسپشیال تنکس تو picsart studio</span></div><div style="text-align: justify;"><span style="font-size: small;">و یه رفیقی دارم که همیشه و همه جا باهامه و رفیق تنهاییاست..امسال رفاتمون 15 ساله شد. معرفی میکنم. بچه ها&nbsp;</span><a href="http://s5.picofile.com/file/8128513192/%DA%AF%DB%8C%D8%AA%DB%8C_%D8%AE%D8%A7%D9%86%D9%88%D9%85.jpg" target="_blank" title=""><font color="#ff0000" size="2">گیتی خانوم</font></a><span style="font-size: small;">. گیتی خانوم، بچه ها&nbsp;</span></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="/post/category/7" class=text4>خاطرات من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                <a href="/post/tag/عکاسی های من" class=text4>عکاسی های من</a>،                 <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="/post/881#commentlist">نظرات (<script>setCommentCnt(881)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('881','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        <div class="com">
+            <a name='commentlist'></a>                <div class="com1">
+                    <div class="com2 , text100">4 مهر 93 05:27 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">احسان</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">بخشید من نفهمیدم چرا گیتی شما خانم است؟</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">25 تیر 93 12:12 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href=""></a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">دکتر قبل از دانشگاه گیتی خانوم آشنا شدب یا حین دانشگاه؟</div>
+                    <div class="com5 , text102">حمید احمدی<img src="/public/public/rte/images_new/smiles/1.gif"> قبلش</div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">22 تیر 93 04:33 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">تابان</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">گیتاره؟؟؟جدی؟؟ چند دقیقه پشت سر دکترها حرف زدم...حلال کنید</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">19 تیر 93 03:12 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">http://hajatmand.persianblog.ir/</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">خیلی جالب بود مخصوصا اون موزه <br />
+من فکر کردم واقعا دوستی چیزی دارید </div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">19 تیر 93 12:19 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">haminam munde</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">من با موبایل آن شده بودم اعراب کلمات نشون داده نمیشد واسه همین متوجه فهوای کلام نشدم و عرض کردم این کجاش سوتی بود!<br />
+همون موقع که داشتم تو کامنتا دنبال یه کلیدی چیزی میگشتم که منظورو دریابم به نکته ای دوست نداشتنی برخوردم..<br />
+بعضی دوستان انگار دارن برای پسرکی شونزده هفده ساله کامنت میذارن..<br />
+کاش موقعیت شناس تر باشیم.. انقدر تو حاشیه غور نکنیم.. احترام پیش درآمد حرفا و نقدامون باشه..<br />
+چی بگم... بگذریم!</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">18 تیر 93 06:43 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">فاطمه</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">15 سال!!! چه خوب موندن! وی وی ما پنج سالشه هرروز دوا درمون میخاد</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">16 تیر 93 03:32 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">حامد</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">بی نمک شدی دکی!</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">16 تیر 93 12:47 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href=""></a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">خیلی بی مزه ای</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">16 تیر 93 09:49 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">رمیصا</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">دكتر خیلی بامزه ای .<br />
+كودك درونت ب شدت فعاله.من اگه موز رو ببینم میخورمش دیگه از این خلاقیتها از خودم در نمیكنم.</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">14 تیر 93 10:53 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">ع.ح</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">اول که عنوان مطلب رو خوندم فکر کردم در رابطه با فیلم هیس دخترها فریاد نمی زنند........... در کل ایده جالبی بود.</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">13 تیر 93 04:46 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">fahimeh</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">آخر چه کند با دل من علم پزشکی /وقتی که به دیدار تو بسته ضربانم!<br />
+* کامنت مرتبط برای لج دکتر</div>
+                    <div class="com5 , text102">حمید احمدی<img src="/public/public/rte/images_new/smiles/16.gif"></div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">13 تیر 93 10:55 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">ملیکا</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">سلام،برای منم پیش اومده که کلمه ای رو اشتباه بخونم و فکر کنم نویسنده سوتی داده. به شما به خاطر روحیه خوبتون تبریک میگم.  فقط نمیدونم چه جوری تونستید موزی رو که به شما اعتماد کرده و خوابیده بود رو نوش جان کنید.ایا میشود عکس موز جان رو دانلود کنم؟؟؟؟؟؟ </div>
+                    <div class="com5 , text102">حمید احمدیyes</div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">13 تیر 93 02:04 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">مهسا</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">شما دست چپید؟</div>
+                    <div class="com5 , text102">حمید احمدیnope</div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">13 تیر 93 01:28 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">تاراس</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">بیمارستان فیروزگر!</div>
+                    <div class="com5 , text102">حمید احمدی<img src="/public/public/rte/images_new/smiles/3.gif"></div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">12 تیر 93 09:43 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">ویدا</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">بسی جالب انگیز بود ....<br />
+شما همه جای مغزتونو اکتیو نگه داشتین.. <br />
+شادباش میگن دکتر جان</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">12 تیر 93 05:02 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">فاطمه</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">خیلی وبه خوبی دارین..تشکر..اولین باریه کامنت میذارم..ولی همیشه پستاتونو میخونم..خییییییلی بامزه بود..منم یه بار تو کلاسه ادبیات خواستم رو خوانی کنم گفتم بادمجان ینی به باد کسره دادم فکر میکردم مثه باد صبا و..گفتم لابد جدیده تا نگو بادمجان خوردنیه..اخه فکرم نمیکردم بادمجان تو اون حسه ادبی چیکار میکنه:)ببخشید وقت کردم..</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">12 تیر 93 04:23 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">ناصری</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">برا منم از این اتفاقا افتاده روی دیوار مدرسه نزدیک خونمون نوشته بود: تنها علم فایده ندارد<br />
+اون موقع که بچه بودم فکر می کردم منظورش اینکه تنها چیزی که فایده ندارد علم است بعدنا متوجه شدم منظورش یه چیز دیگست<br />
+اینم بگم حدود چهل سال پیش شوروی و آمریکا در برنامه های فضایی رقابت شدیدی داشتند خارج از جو به دلیل نبود جاذبه نمی شد از خودکار برای یادداشت برداری استفاده کرد یکی از این دو کشور دقیقا یادم نیس کدومشون برای رفع این مشکل یه چیزهای طراحی کرده بود ولی بازم کامل نبود و به این دلیل که وقشون هدر نره سعی کردن از تجربه های رقیب خود استفاده کنن بعد دیدن اونا دارن از مداد استفاده می کنن...<br />
+گاهی وقتها فکرهای بزرگ آنقدر ذهنو مشغول می کنه که مسئله های کوچک با فکرهای بزرگ قاطی می شن (این جمله از خودن بود) <br />
+فکر می کنم به همین خاطر شما سالمند رو اونجوری خوندید</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">12 تیر 93 02:06 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">پروفسور سمیعی دوم</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">اقای دکتر صد رحمت به سوتی های شما!یادمه یه بار از نرده های مدرسه بدون هماهنگی سر اومدم!وقتی رسیدم پایین دیدم مدیر و معاون دارن از عصبانیت منفجر میشن .بعد زود از پله هل دویدم بالا و نزدیک بود بخورم به دو تا معلم اقایی که از تعجب چشاشون چهار تا شده بود .یه بارم به پسر عمه ی یکی از اون معلما فحش دادم نگو پشت سرم وایساده داره گوش میده !سوتی های شما اثراتی در سالهای اتی نداره بازد،</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">12 تیر 93 12:25 ق.ظ</div>
+                    <div class="com3 , text100"><b><a href="">nazi sin</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">قبل از اینکه عکس دوم رو باز کنم فک کردم اینام ابتکاری مث من و دوستام به خرج دادن ، ما تو اتاقمون یه تابلو سوتی داریم که هر کی سوتی داد اون تو مینویسیم و کنارش هم اسم سوتی دهنده رو اینجوری در پایان هر ترم لقب سِر سوتی به کسی داده میشه که بیشترین سوتی رو داده :))<br />
+مثلا یکی به پیکسل میگه پیسکل <br />
+یکی به افعال معکوس میگه افکال معلوس ، یا مثلا میخواست بگه غلط کردی ، گفت غلط خوردی :)))<br />
+کلی سوتی ِ خنده دار و بعضا هم روم به دیوار ِ دیگه :D<br />
+برای امتحان ِ بوردتون هم دعا میکنیم :)</div>
+                    <div class="com5 , text102">حمید احمدیجالبه..تابلوی سوتی</div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">11 تیر 93 11:50 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">haminam munde</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">نمیدونم داستان چیه..نوشته گنگ بود..من گنگم..آی کیوم گنگ شده..مث بعضیا البته(آیکون تیکه) !!!<br />
+آقا اجازه؟ من نفهمیدم..به جون خودمون آقا همیشه خوب میگرفتیم مطلبو،ولی این سوتیه رو نه.. هرچی فک میکنیم شما اصن سوتی ندادی که! چی شده؟ (آیکون فامیل دور با سبیل های ورتابیده)<br />
+یکی منو نجات بده،دچار یأس فلسفی شدم</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">11 تیر 93 09:30 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">فرشته</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">فقط اولیش بامزه بود اونم یخرده!<br />
+خیلی تو این دوره درس خوندن استعداداتون تنزل پیدا کرده هااااااااا</div>
+                    <div class="com5 , text102">حمید احمدی<img src="/public/public/rte/images_new/smiles/1.gif"> </div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">11 تیر 93 08:07 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">نیلو</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">سلام دکتر موزه خلاقیت جالبی بود .آخی گیتی خانومت مث مال داداشمه چقد.موفق باشید</div>
+                    <div class="com5 , text102">حمید احمدیممنان </div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">11 تیر 93 07:36 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">ژینوس</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">حمید جان تازه گی ها از جائز الخطا به دائم الخطا داری تبدیل میشی هنوز یادم نرفته روز تولد خواهرزادهت  یادت رفته بود  حالا هم که سوتی  پاشو پاشو یک سری به باغ وچمن و گل وسبزه بزن  یک کم حال واحوالت عوض شه  بچه موز نخوابون خودت یک کم بخواب معلوم نیست چی لالایی گفتی بچه موزه داره کابوس میبینه <br />
+</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">11 تیر 93 05:15 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">setarehesoheil</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">به کودکِ درونتان حسودیمان میشود...</div>
+                    <div class="com5 , text102">حمید احمدی<img src="/public/public/rte/images_new/smiles/1.gif"></div>                </div>
+                            <div class="com1">
+                    <div class="com2 , text100">11 تیر 93 04:54 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">mmm</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">dr xuB?!</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">11 تیر 93 03:33 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">مریم...</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">خیلی جمله ب موقعی بود.پایان زیبا رو میگم.واسه من خیلی خوب بود.آخه آغازم رو بد شروع کردم بخاطر فرصتهایی ک دیگران ازم تصاحب کردن.ممنونم.شمابهترین دکتری هستی ک تو عمرم دیدم.خواهرمن رزیدنته اما اصلااخلاقشو نمی پسندم.شما خیلی خاکی هستین.انشاالله سالم باشید.وب زودی برد قبول شید.خداحفظتون کنه.</div>
+                                    </div>
+                            <div class="com1">
+                    <div class="com2 , text100">11 تیر 93 02:08 ب.ظ</div>
+                    <div class="com3 , text100"><b><a href="">مهسا.م</a></b></div>
+                    <div class="com7"><img src="http://mihanblog.com/public/public/user_data/template/2099141/icon-nazar.png" width="20" height="20" border="0"></div>
+                    <div class="com4 , text101">حالا چرا انگشتارو شکل شیطان پرستا کشیدی؟!!<br />
+بچه موز یا خوابش نمیبره یا کابوس میبینه!<br />
+این همه ادم فقط امتحان دادنتو تبریک گفتن شمام معرفت داشته باش به کسی که تازه کنکور داده یه <br />
+:نه خسته ایی بگو!</div>
+                                    </div>
+                        <div class="com6 , text101"><style>
+
+
+#imageCodeWrapper div{
+	float: right;
+}
+#imageCodeWrapper .imageCode_input #imgstr{
+	width:83px;
+	height:34px;
+	font-size:25px;
+}
+#imageCodeWrapper .imageCode_number{
+	margin:1px 5px 0px 0px;
+}
+#imageCodeWrapper .imageCode_number img{
+ 	border: 0px;
+ 	width: 122px;
+ 	height: 37px;
+}
+#imageCodeWrapper .imageCode_refresh{
+	cursor:pointer;
+	margin: 3px 3px 0px 0px;
+
+	width: 16px;
+	height: 16px;
+
+    background:url(http://static.mihanblog.com//public/images/icon/gen/refresh.gif) center right no-repeat;
+}
+
+.clearfix {display: inline-block;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+
+
+
+.comment_form .err-msg{
+	padding-right: 110px;
+	color: #F00;
+}
+.comment_form{
+	direction: rtl;
+}
+
+.comment_form label{
+	width: 110px;
+	display: block;
+	float: right;
+}
+.comment_form .comment_form_msg{
+	background: none repeat scroll 0 0 #8CDA5C;
+    border: 1px solid #249224;
+    padding: 5px;
+    margin: 5px;
+}
+.comment_form .required{
+	background: url(http://static.mihanblog.com//public/images/icon/require2.gif) no-repeat right top;
+	padding-right: 20px;
+}
+
+.comment_form .required{
+	width: 90px;
+}
+.comment_form .controls{
+	text-align: center;
+}
+.comment_form .btn{
+	font-family: tahoma;
+}
+.smileLayer{
+    position:absolute;
+    display:none;
+    background-color:#fff;
+    border:1px solid #555;
+}
+    .msgbody{
+        float:right;
+        width:260px
+    }
+    .msgtitle{
+        float:right;
+        -width:57px;
+        text-align:right;
+        -padding-right:64px;
+    }
+</style>
+
+<script>
+    var mihanBlog_commentBody_cursorPos=0;
+    function set_mihanBlogCommentBodyCursorPos(textarea_id){
+        mihanBlog_commentBody_cursorPos = c_$(textarea_id).selectionStart;
+    }
+</script>
+
+<form id="frm-16066551465fc39caadb858" method="post" action="http://dr_ahmadi.mihanblog.com/post/comment/new/881/fromtype/postone/fid/16066551465fc39caadb858/atrty/1606655146/avrvy/0/key/44667d3f2db8b206b58047739bb6c235/#post_form" >
+	<a name="post_form"></a>
+	<div class="comment_form">
+
+					<div class="comment_form_row clearfix">
+				<label for="full_name">نام (فارسی):</label>
+				<input type="text" name="data[full_name]" id="full_name" value="" class="comment_form_textbox" />			</div>
+
+			<div class="comment_form_row clearfix">
+				<label for="email">ایمیل :</label>
+				<input type="text" name="data[email]" id="email" value="" class="comment_form_textbox english" />			</div>
+
+			<!--
+            <div class="comment_form_row clearfix">
+				<label for="web">آدرس وب/وبلاگ :</label>
+				<input type="text" name="data[web]" id="web" value="" class="comment_form_textbox english" />			</div>
+            -->
+
+			<div class="comment_form_row clearfix">
+				<label for="remember">مرا بخاطر بسپار :</label>
+				<input type="checkbox"  name="data[remember]" id="remember" value="1" />			</div>
+
+			<div class="comment_form_row clearfix">
+
+                <div class="msgtitle" for="title">
+                	<label class="required">
+                    	متن نظر (فارسی): 					</label>
+                     <!--   
+                    <div id="showsmile" style="position: relative;">
+                        <img src="http://static.mihanblog.com//public/rte/images_new/smiley.gif" onClick="showMihanBlogSmileBox('body')" style="cursor:pointer" />                    </div>
+                    <div class="smileLayer" id="MihanBlogSmiles_body"><table cellpadding="0"  cellspacing="0"  width="120"><tr><td colspan=2>&nbsp;</td><td style="cursor:pointer;text-align:left;padding:3px 0px 0px 3px;" onclick="showMihanBlogSmileBox('body')"><img src="http://static.mihanblog.com//public/images/icon/close.gif"  /></td></tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/1.gif" onClick="MihanBlogShowSmile('لبخند','body')" title="لبخند" alt="لبخند" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/2.gif" onClick="MihanBlogShowSmile('ناراحت','body')" title="ناراحت" alt="ناراحت" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/3.gif" onClick="MihanBlogShowSmile('چشمک','body')" title="چشمک" alt="چشمک" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/4.gif" onClick="MihanBlogShowSmile('نیشخند','body')" title="نیشخند" alt="نیشخند" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/6.gif" onClick="MihanBlogShowSmile('بغل','body')" title="بغل" alt="بغل" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/7.gif" onClick="MihanBlogShowSmile('سوال','body')" title="سوال" alt="سوال" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/8.gif" onClick="MihanBlogShowSmile('قلب','body')" title="قلب" alt="قلب" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/9.gif" onClick="MihanBlogShowSmile('خجالت','body')" title="خجالت" alt="خجالت" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/10.gif" onClick="MihanBlogShowSmile('زبان','body')" title="زبان" alt="زبان" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/11.gif" onClick="MihanBlogShowSmile('ماچ','body')" title="ماچ" alt="ماچ" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/13.gif" onClick="MihanBlogShowSmile('تعجب','body')" title="تعجب" alt="تعجب" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/14.gif" onClick="MihanBlogShowSmile('عصبانی','body')" title="عصبانی" alt="عصبانی" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/16.gif" onClick="MihanBlogShowSmile('عینک','body')" title="عینک" alt="عینک" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/19.gif" onClick="MihanBlogShowSmile('شیطان','body')" title="شیطان" alt="شیطان" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/20.gif" onClick="MihanBlogShowSmile('گریه','body')" title="گریه" alt="گریه" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/21.gif" onClick="MihanBlogShowSmile('خنده','body')" title="خنده" alt="خنده" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/24.gif" onClick="MihanBlogShowSmile('قهقهه','body')" title="قهقهه" alt="قهقهه" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/27.gif" onClick="MihanBlogShowSmile('خداحافظ','body')" title="خداحافظ" alt="خداحافظ" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/31.gif" onClick="MihanBlogShowSmile('سبز','body')" title="سبز" alt="سبز" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/33.gif" onClick="MihanBlogShowSmile('قهر','body')" title="قهر" alt="قهر" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/36.gif" onClick="MihanBlogShowSmile('هورا','body')" title="هورا" alt="هورا" style="cursor:pointer" /></td>	</tr>	<tr><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/41.gif" onClick="MihanBlogShowSmile('دست','body')" title="دست" alt="دست" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/53.gif" onClick="MihanBlogShowSmile('گل','body')" title="گل" alt="گل" style="cursor:pointer" /></td><td width="40px" height="30px" align="center"><img src="http://static.mihanblog.com//public/rte/images_new/smiles/39.gif" onClick="MihanBlogShowSmile('تفکر','body')" title="تفکر" alt="تفکر" style="cursor:pointer" /></td>	</tr>	</table></div>                    -->
+                </div>
+                
+                <div class="msgbody">
+				    <textarea name="data[body]" id="body" class="comment_form_textarea" onkeyup="showCaptcha();set_mihanBlogCommentBodyCursorPos('body');" onkeypress="set_mihanBlogCommentBodyCursorPos('body');" onclick="set_mihanBlogCommentBodyCursorPos('body');" rows="8" cols="40"></textarea>                </div>
+
+                <script type="text/javascript">
+
+                                        var showCaptcha = function(){
+                                                    if(c_$('body').value.length>5){
+                                c_$("imageCodeWrapper").style.display="";
+                            }
+                                            }
+                </script>
+			</div>
+
+			<div class="comment_form_row clearfix">
+				<label for="private">ارسال نظر خصوصی :</label>
+				<input type="checkbox"  name="data[private]" id="private" value="1" />			</div>
+        
+							<div class="comment_form_row clearfix">
+					نظرات پس از تایید نشان داده خواهند شد.				</div>
+			
+			<div class="controls clearfix">
+				
+        		<style>
+        		    #imgstr{
+        		        font-size:12px;
+        		    }
+        		</style>
+        		<div id="imageCodeWrapper" class="comment_form_row clearfix">
+	        			<label class="required" for="imgstr">عبارت تصویر :</label>
+	        			
+	        			<div class="imageCode_input">
+	        				<input type="text" name="imgstr" id="imgstr" style="" class="comment_form_textbox">
+	        			</div>
+		        		<div class="imageCode_number">
+	        				<img id="imgcodepage_151602" style="width: auto; height: auto;max-width:140px" src="/public/public/html/imgcode.php?str=8b04a13cd5337b7a3be6999e2b41a111____tjjrmbckrb11" >
+	        			</div>
+	        			<div class="imageCode_refresh" title="تعویض عبارت تصویری" onclick="changeImgCode_151602();"></div>	
+	        	</div>
+	        	<input type="hidden" name="imgcode" id="imgcode_151602" value="8b04a13cd5337b7a3be6999e2b41a111____tjjrmbckrb11">
+        		<script>
+        		var imgCodeChangeNum_151602 = 0 ;
+        		changeImgCode_151602 = function (){
+	        		var ImgCodeArr_151602 = new Array();
+	        		ImgCodeArr_151602[1]="b8b47752dff6ab945e0f7e1b19cb0298____ufroujou67";
+	        		ImgCodeArr_151602[2]="9b14ed1207f9e99f7bbc1f1ccd840287____rdbdhdlvr35";
+	        		ImgCodeArr_151602[3]="06058cf1c869f158c68eb4a835b5a17d____mohqyheyd59";
+	        		ImgCodeArr_151602[4]="6ce395213a7cf94d3aec10b3d5a5c5ed____sspdpufszl51";
+	        		
+	        		
+	        		if(imgCodeChangeNum_151602<4){
+	        			imgCodeChangeNum_151602 ++ ;
+	        		}
+	        		else{
+	        			imgCodeChangeNum_151602 = 1 ;
+	        		}
+	        		
+	        		c_$("imgcode_151602").value = ImgCodeArr_151602[imgCodeChangeNum_151602];
+	        		document.getElementById("imgcodepage_151602").src = "/public/public/html/imgcode.php?str="+ImgCodeArr_151602[imgCodeChangeNum_151602];
+        		}
+        		</script>
+        		<input type="submit" value="ارسال" class="btn" classRow="comment_form_row" onclick="click_send()" />
+			</div>
+	</div>
+
+<input type="hidden" name="frm-id" value="16066551465fc39caadb858" id="frm-id" /></form>
+<script>
+function click_send(){
+
+	Delete_Cookie( 'CMDinfo','/post/', '.mihanblog.com' );
+
+	if(c_$('remember').checked){
+		var cookieStr = c_$('full_name').value +"_____"+c_$('email').value+"_____"+c_$('web').value;
+		Set_Cookie( 'CMDinfo', cookieStr , 1, '/post/', '.mihanblog.com', 0 );
+	}
+}
+
+
+//LOAD
+var CMDinfo = Get_Cookie('CMDinfo');
+
+if(CMDinfo)
+{
+	CMDinfo = CMDinfo.split("_____");
+	c_$('full_name').value = CMDinfo[0];
+	c_$('email').value = CMDinfo[1];
+	c_$('web').value = CMDinfo[2];
+	c_$('remember').checked = true;
+}
+
+</script></div>
+        </div>
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text4>
+                <br><br>
+            </font>
+    </div>
+</div>
+
+<div class=div17>
+
+    <div class=div60>
+        <div class=div101>
+            <div class=div10><font class=title>وب نوشته های یك جراح</font></div></div>
+        <div class=div11>
+            <div class=div12><font class=des>وبلاگ دکتر حمید احمدی</font></div></div>
+    </div>
+
+    <form id="frm-16066551465fc39caadc40f" method="get" action="http://dr_ahmadi.mihanblog.com/post/search/fid/16066551465fc39caadc40f"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div80>
+        <div class=div81></div>
+        <div class=div37>
+            <input type="text" name="search_text" size="25" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; color:#FFFFFF"></div>
+        <div class=div38>
+            <input type="image" src="http://mihanblog.com/public/public/user_data/template/2099141/blank.gif" width=67 height=28></div>
+    </div><input type="hidden" name="frm-id" value="16066551465fc39caadc40f" id="frm-id" /></form>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div31><center></center><br>
+                <font class=text1><center>من یک جراح  هستم ، فارغ التحصیل رشته فلوشیپ جراحی پستان .اینجا یادداشت های روزانه منو می خونید که اکثرا ربطی به رشته تحصیلی من نداره .. دوست دارم به این فکر کنین که یه جراح هم می تونه حرفای دیگه ای غیر از رشته خشک و خشنش داشته باشه.پس لطفا ((جور دیگر )) به یادداشت های من نگاه کنین. متاسفانه به خاطر مشغله کاری نمی تونم به اکثر کامنت ها جواب بدم. لطف کنین و مرتبط با پست کامنت بزارین. و اگه سوالی غیر مرتبط دارین و دوست دارین به جوابتون برسین به 1jarrah@hotmail.com بفرستین. دیرُزود داره ولی ...(ممنون که خیلیاتون اصلا اینا رو نمی خونین)</center><br>
+                    <img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10">مدیر وبلاگ : <a href="/post/author/127594">حمید احمدی</a></font></div>
+        </div><div class=div30></div>
+    </div>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1129">آدرس مطب دکتر حمید احمدی </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1128">رمان گریزها </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1127">رمان &quot;دختری در قطار&quot;</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1126">بنی آدم </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1125">اشکال در پاسخگویی به سوالات </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1124">سال نو مبارک </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1123">به کرونا پناه می بریم </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1122">کرونا </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1121">خوره ی فیلم </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1120">خطای انسانی + صداقت  </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1119">پوپولیست ( داستان کوتاه )</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1118">شومن کنکور هم ثبت نام کرد </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1117">ماه اکتبر ماه اطلاع رسانی سرطان پستان </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1115">تولد داریم چه تولدی </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1116">رامبد میانسال پدر می شود </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1114">برای راه اندازی سایت راهنمایی کنید </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1113">دریغ از پارسال</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1112">عید 98 </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1110">کتاب ملت عشق </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1109">یاداوری </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1108">م مثل مادر </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1107">انتظار ( داستان کوتاه ) </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1106">برنامه ریزی زمان </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1105">سرماخوردگی خر است </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1103">کوروش بزرگ </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1102">یه تیکه کاغذ . . . </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1101">رازداری شنیده بودیم اما....</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1100">امید . . .</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1099">ای خوش کمر نرقصا </a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/1098">در جریان باشید که . . .</a></font></div>        </div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>موضوعات</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/9">آهنگ های من (9)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/16">مینیمال های من (10)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/11">طنز نوشته های من (130)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/2">شعر های من (14)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/8">خوشنویسی های من (18)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/10">کتاب هایی که خوندم (44)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/12">داستانهایی که نوشتم (26)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/7">خاطرات من (303)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/15">فیلم نوشت (13)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/6">طنز های دیگران (78)</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/category/4">روز نوشت (195)</a></font></div>        </div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1399/6"> شهریور 1399</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1399/3"> خرداد 1399</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1399/2"> اردیبهشت 1399</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1399/1"> فروردین 1399</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1398/12"> اسفند 1398</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1398/11"> بهمن 1398</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1398/10"> دی 1398</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1398/9"> آذر 1398</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1398/7"> مهر 1398</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1398/4"> تیر 1398</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1398/3"> خرداد 1398</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1398/1"> فروردین 1398</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1397/11"> بهمن 1397</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1397/9"> آذر 1397</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1397/7"> مهر 1397</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1397/5"> مرداد 1397</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1397/4"> تیر 1397</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1397/3"> خرداد 1397</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1397/2"> اردیبهشت 1397</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive/1397/1"> فروردین 1397</a></font></div>            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/archive">آرشیو كل مطالب</a></font></div>
+        </div><div class=div30></div>
+    </div>
+    
+    
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>نویسندگان</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/author/127594">حمید احمدی (1019)</a></font></div>        </div><div class=div30></div>
+    </div>
+    
+    
+		
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>برچسبها</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D8%AE%D8%A7%D8%B7%D8%B1%D8%A7%D8%AA+%D8%B7%D8%B1%D8%AD">خاطرات طرح</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%D8%B7%D9%86%D8%B2">داستان طنز</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D8%AF%D8%A7%D8%B3%D8%AA%D8%A7%D9%86+%DA%A9%D9%88%D8%AA%D8%A7%D9%87">داستان کوتاه</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D8%B7%D9%86%D8%B2">طنز</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D8%AA%D8%B1%D8%A7%D9%88%D8%B4%D8%A7%D8%AA+%D8%B0%D9%87%D9%86%DB%8C">تراوشات ذهنی</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D8%B9%DA%A9%D8%B3+%D8%A8%DB%8C%D9%85%D8%A7%D8%B1%D8%A7%D9%86">عکس بیماران</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D8%A7%D9%85%DB%8C%D8%B1+%D8%B1%D8%B6%D8%A7">امیر رضا</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D9%85%D8%AA%D9%86+%D8%A7%D8%AF%D8%A8%DB%8C">متن ادبی</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D9%85%DB%8C%D9%86%DB%8C%D9%85%D8%A7%D9%84">مینیمال</a></font></div><div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="/post/tag/%D9%85%D8%B9%D8%B1%D9%81%DB%8C+%DA%A9%D8%AA%D8%A7%D8%A8">معرفی کتاب</a></font></div>        </div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div>
+            <div class=div32><img border="0" src="http://mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div>
+        </div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <style>
+            .mihan_logo {
+                background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                height: 131px;
+                margin-top: 10px;
+                text-align: center;
+            }</style>
+        <div class="mihan_logo"></div>
+        <center></center><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+</div>
+
+</div>
+</td>
+<td class=div01 valign=top><div class=div001></div></td>
+<td class=div02>&nbsp;</td>
+</tr>
+<tr>
+    <td class=div04>&nbsp;</td>
+    <td colspan="3" class=div4>
+        <div class=div6></div>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://mihanblog.com/public/public/user_data/template/2099141/blank.gif" border=0 width=189 height=35></a></div></td>
+    <td class=div04>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 460px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'dr_ahmadi.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>
