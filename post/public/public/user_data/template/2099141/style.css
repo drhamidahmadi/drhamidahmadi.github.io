@@ -1,0 +1,83 @@
+body{background-color:#171b1c; margin:0 0 0 0; font-family:Tahoma;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+.title{font-family:Times New Roman; font-size:22pt; color:#ffffff; font-weight:bold;}
+.des{font-size:10pt; color:#bbbbbb; font-weight:bold;}
+
+.text1{font-size:8pt; color:#cacaca;}
+.text1 a{font-size:8pt; color:#cacaca;}
+.text2{font-size:8pt; color:#fceaac;}
+.text2 a{font-size:8pt; color:#fceaac;}
+.text3{font-size:9pt; color:#ffddea;}
+.text3 a{font-size:9pt; color:#ffddea;}
+.text4{font-size:8pt; color:#2d2d2d;}
+.text4 a{font-size:8pt; color:#2d2d2d;}
+.text5{font-size:9pt; color:#ffffff; font-weight:bold;}
+.text6{font-size:9pt; color:#a30000; font-weight:bold;}
+.text6 a{font-size:9pt; color:#a30000; font-weight:bold;}
+.text7{font-size:8pt; color:#2f3d41;}
+.text7 a{font-size:8pt; color:#2f3d41;}
+.text8{font-size:8pt; color:#193f5b;}
+.text8 a{font-size:8pt; color:#193f5b;}
+
+.div1{width:804; background-image: url(mytheme.ir_02.jpg); background-repeat: repeat-y; float:left;}
+.div01{width:20; background-image: url(mytheme.ir_18.jpg); background-repeat: repeat-y;}
+.div001{width:20; height:381; background-image: url(mytheme.ir_05.jpg); background-repeat: no-repeat;}
+.div2{width:804;}
+.div02{background-image: url(mytheme.ir_01.jpg); background-repeat: repeat-x;}
+.div3{width:36; height:30; float:left;}
+.div4{width:841; height:82; background-image: url(mytheme.ir_22.jpg); background-repeat: no-repeat;}
+.div04{height:71; background-image: url(mytheme.ir_21.jpg); background-repeat: repeat-x;}
+.div6{width:200; height:70; float:left;}
+.div7{width:265; float:left; padding-top:20;}
+.div10{width:289; float:left; text-align:center; direction:rtl; padding-top:30;}
+.div101{width:289; float:left;}
+.div11{width:289; float:left;}
+.div12{width:289; float:left; text-align:center; direction:rtl; padding-top:20;}
+.div13{width:892; height:33; float:left;}
+.div15{width:515; height:79; float:left; background-image: url(mytheme.ir_17.jpg); background-repeat: no-repeat; text-align:right; direction:rtl;}
+.div015{width:100; height:79; float:left;}
+.div17{width:289; float:left; background-image: url(mytheme.ir_04.jpg); background-repeat: no-repeat;}
+.div18{width:385; height:50; float:left;}
+.div018{width:385; height:7; float:left;}
+.div19{width:440; float:left; padding-top:10; text-align:left;}
+.div20{width:515; float:left; background-image: url(mytheme.ir_03.jpg); background-repeat: no-repeat; padding-top:120;}
+.div21{width:500; float:left; text-align:right; direction:rtl;}
+.div22{width:464; height:20; float:left;}
+.div23{width:289; height:120; float:left;}
+.div24{width:289; float:left;}
+.div25{width:260; float:left; padding-top:26; text-align:right;}
+.div26{width:515; height:60; float:left; background-image: url(mytheme.ir_25.jpg); background-repeat: no-repeat;}
+.div27{width:87; float:left; padding-top:6; text-align:right; direction:rtl;}
+.div28{width:509; float:left; text-align:center; direction:rtl;}
+.div29{width:509; height:30; float:left;}
+.div30{width:289; height:20; float:left;}
+.div31{width:224; float:left; text-align:right; direction:rtl;}
+.div131{width:20; height:30; float:left;}
+.div32{width:224; float:left; text-align:right; direction:rtl; padding-top:5;}
+.div33{width:71; height:82; float:left; text-align:right;}
+.div34{width:120; height:35; float:left;}
+.div341{width:224; float:left;}
+.div35{width:289; height:74; float:left; background-image: url(mytheme.ir_10.jpg); background-repeat: no-repeat;}
+.div37{width:175; float:left; padding-top:10;}
+.div38{width:80; float:left; padding-top:6;}
+.div50{width:892; height:42; float:left;}
+.div51{width:88; height:42; float:left;}
+.div52{width:620; height:42; float:left; text-align:center; direction:rtl;}
+.div54{width:509; float:left;}
+.div55{width:25; height:25; float:left;}
+.div56{width:460; float:left; padding-top:15;}
+.div57{width:30; height:40; float:left;}
+.div58{width:385; float:left; direction:rtl; text-align:left; padding-top:3;}
+.div60{width:289; height:155; float:left;}
+.div70{width:17; background-image: url(mytheme.ir_06.jpg); background-repeat: repeat-y;}
+.div71{width:17; height:381; background-image: url(mytheme.ir_07.jpg); background-repeat: no-repeat;}
+.div80{width:289; height:40; background-image: url(mytheme.ir_09.jpg); background-repeat: no-repeat; float:left;}
+.div81{width:30; height:40; float:left;}
+
+.comment_form{
+	text-align:right	
+}
+.comment_form textarea{
+	width:275px;	
+}
