@@ -1,8 +1,9 @@
 import glob, os
 
-for name in glob.glob('C:/Users/Test/Downloads/mihanblog/post/*.htm'):
+for name in glob.glob('C:/Users/Test/Downloads/mihanblog/page/**/*.htm', recursive=True):
   path = name[:-4]
-  os.mkdir(path)
+  if not os.path.exists(path):
+    os.makedirs(path)
   try:
     os.rename(name, path + '/index.htm')
   except FileExistsError:

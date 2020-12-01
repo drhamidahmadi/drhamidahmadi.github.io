@@ -1,0 +1,1938 @@
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="../../../../xmlrpc_8.xml" />
+<script type="text/javascript" src="../../../../public/scripts/run/g.other.v3.js"></script>
+<script>
+
+	function c_$(id){
+        return document.getElementById(id);
+    }
+    
+			//if (parent.frames.length) top.location.href= document.location;
+		
+	setTodayDate = function(){
+		document.write('9 آذر 99');
+		/*224794*/	}
+
+</script>
+
+
+
+        <script type="text/javascript">
+            (function(){
+            var now = new Date();
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.async = true;
+            var script_address = 'https://cdn.yektanet.com/js/mihanblog.com/native-mihanblog.com-6531.js';
+            script.src = script_address + '?v=' + now.getFullYear().toString() + '0' + now.getMonth() + '0' + now.getDate() + '0' + now.getHours();
+            head.appendChild(script);
+            })();
+        </script>
+
+        <!--<script type="text/javascript">
+            var head = document.getElementsByTagName("head")[0];
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+            script.async=1;
+            script.src = "https://s1.mediaad.org/serve/mihanblog.com/loader.js" ;
+            head.appendChild(script);
+        </script>-->
+        
+        <script>
+            var sabaVisionWebsiteID = "9bab9dac-041d-4bdb-b39a-1ed789f65eed"; var sabaVisionWebsitePage = "ALL"
+        </script>
+        <link rel="stylesheet" href="../../../../plus.sabavision.com/dox/dox.min.css">
+        <script src="../../../../plus.sabavision.com/dox/dox.min.js"></script>
+        
+        <script>
+	try{
+		var commentCnt = new Array();
+		commentCnt[361]='41';commentCnt[368]='37';commentCnt[377]='46';commentCnt[379]='58';commentCnt[385]='18';commentCnt[387]='18';commentCnt[393]='75';commentCnt[405]='36';commentCnt[406]='53';commentCnt[407]='50';	} catch(e){}
+	
+	newComment = function(post_id){
+		try{
+			window.open('/post/comment/'+post_id,'comment','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=540px');
+		} catch(e){}
+	}
+	setCommentCnt = function(post_id){
+		try{
+			if(commentCnt[post_id]){
+				document.write(commentCnt[post_id]);
+			} else {
+				document.write(0);
+			}
+		} catch(e){}
+	}
+</script><script>
+
+
+	mihanblogUpdateLike = function(postid,type){
+		var url = '/post/like/'+postid+'/'+type;
+		mihanblogGetAjax(url,function(){});
+	};
+	try{
+        mihanblogGetAjax = function (url,callback) {
+    		var req;
+			if (window.XMLHttpRequest)
+            {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+			  	req = new XMLHttpRequest();
+			}else{	// code for IE6, IE5
+			  	req = new ActiveXObject("Microsoft.XMLHTTP");
+		  	}
+		    req.open("GET", url, 1);
+		    req.onreadystatechange = function () {
+		        if (req.readyState == 4) {
+		            if (req.status == 200) {
+		            	var response = eval(req.responseText);
+		            	callback();
+		            }else{
+	            		return ;
+		            }
+		        }else{
+					return ;
+		        }
+		    }
+		    req.send(null);
+		}
+	}catch(e){}
+
+	try{
+		var mihanblogLikeArrCnt = new Array();
+		var mihanblogDisLikeArrCnt = new Array();
+
+		mihanblogLikeArrCnt[361]='3';
+mihanblogDisLikeArrCnt[361]='0';
+mihanblogLikeArrCnt[368]='5';
+mihanblogDisLikeArrCnt[368]='0';
+mihanblogLikeArrCnt[377]='1';
+mihanblogDisLikeArrCnt[377]='1';
+mihanblogLikeArrCnt[379]='2';
+mihanblogDisLikeArrCnt[379]='0';
+mihanblogLikeArrCnt[385]='1';
+mihanblogDisLikeArrCnt[385]='0';
+mihanblogLikeArrCnt[387]='1';
+mihanblogDisLikeArrCnt[387]='0';
+mihanblogLikeArrCnt[393]='1';
+mihanblogDisLikeArrCnt[393]='0';
+mihanblogLikeArrCnt[405]='0';
+mihanblogDisLikeArrCnt[405]='0';
+mihanblogLikeArrCnt[406]='2';
+mihanblogDisLikeArrCnt[406]='0';
+mihanblogLikeArrCnt[407]='2';
+mihanblogDisLikeArrCnt[407]='1';
+	} catch(e){}
+
+
+
+    mihanblogPostLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+        document.write(
+                '<div class="mihanblog_like_wrapper ">'+
+                       '<div id="dislikeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'dislike\')"   class="mihanblog_like_bar mihanblog_like_dislikeBar mihanblog_like_show_help ">-<div class="mihanblog_like_Cnt" id="disLikeCnt_'+post_id+'">'+mihanblogDisLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_dislike clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_dislike clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">نمی پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+                       '<div id="Like_'+post_id+'" class="mihanblog_like_border"></div>'+
+                       '<div id="likeBar_'+post_id+'" onclick="mihanblogUpdateLike('+post_id+',\'like\')"  class="mihanblog_like_bar mihanblog_like_likeBar mihanblog_like_show_help" >+<div class="mihanblog_like_Cnt" id="likeCnt_'+post_id+'">'+mihanblogLikeCnt+'</div>'+
+                            '<span  class="mihanblog_like_v2_help mihanblog_like_v2_help_like clearfix"> '+
+                                '<span class="mihanblog_like_help_arrow mihanblog_like_help_arrow_like clearfix"></span>'+
+                                '<span class="mihanblog_like_help_text">می پسندم</span>'+
+                            '</span>'+
+                        '</div>'+
+
+                '</div>'
+        );
+
+
+
+        mihanblogDisplayeLike(post_id);
+    }
+
+
+    mihanblogDisplayeLike = function(post_id){
+
+        mihanblogLikeCnt = (mihanblogLikeArrCnt[post_id]? mihanblogLikeArrCnt[post_id] : 0);
+        mihanblogDisLikeCnt = (mihanblogDisLikeArrCnt[post_id]? mihanblogDisLikeArrCnt[post_id] : 0);
+        mihanblogLikeCnt = parseInt(mihanblogLikeCnt);
+        mihanblogDisLikeCnt = parseInt(mihanblogDisLikeCnt);
+
+
+
+        sum = mihanblogLikeCnt - mihanblogDisLikeCnt;
+        backgroundBorder =  document.getElementById('Like_'+post_id);
+        var likeObj = document.getElementById('likeCnt_'+post_id);
+        var disLikeObj = document.getElementById('disLikeCnt_'+post_id);
+
+
+
+
+
+        likeObj.innerHTML =  mihanblogLikeCnt ;
+        disLikeObj.innerHTML =  mihanblogDisLikeCnt;
+
+        if(sum == 0){
+            backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_likedislike.png')";
+            document.getElementById('dislikeBar_'+post_id).style.width = '19px';
+            document.getElementById('likeBar_'+post_id).style.width = '19px';
+        }else{
+             if(sum > 0){
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_like.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '23px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '15px';
+             }else{
+                 backgroundBorder.style.backgroundImage = "url('/public/public/images/icons/like_dislike.png')";
+                 document.getElementById('likeBar_'+post_id).style.width = '15px';
+                 document.getElementById('dislikeBar_'+post_id).style.width = '23px';
+             }
+        }
+
+    }
+
+
+
+
+</script>
+
+<style type="text/css">
+
+
+    .clearfix {display: inline-block;}
+    .clearfix:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .mihanblog_like_wrapper {
+        color: #ffffff;
+        direction: ltr;
+        position: relative;
+    }
+    .mihanblog_like_wrapper span{
+        display: none;
+    }
+    .mihanblog_like_bar {
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font-size: 10px;
+        height: 20px;
+        line-height: 19px;
+        margin: 5px 0;
+    }
+    .mihanblog_like_likeBar {
+        background-color: #88B131;
+        padding-right: 5px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        text-align: right;
+    }
+    .mihanblog_like_likeBar:hover{
+        background-color: #699017;
+    }
+    .mihanblog_like_border {
+        background-color: #666666;
+        border: 1px solid #666666;
+        float: left;
+        font-size: 12px;
+        height: 20px;
+        margin-top: 2px;
+        width: 25px;
+        padding: 3px 5px 2px 0;
+        text-align: center;
+        border-radius: 2px;
+        color: #ffffff;
+        direction: ltr;
+        background-repeat: no-repeat ;
+        background-position: 4px center;
+    }
+    .mihanblog_like_border img {
+        margin-left: 2px;
+        margin-top: 2px;
+        width: 22px;
+    }
+    .mihanblog_like_dislikeBar {
+        background-color: #FF6F31;
+        padding-left: 5px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        text-align:left ;
+    }
+    .mihanblog_like_dislikeBar:hover{
+        background-color: #D54B10;
+    }
+
+
+
+    .mihanblog_like_show_help {
+        position: relative;
+    }
+    .mihanblog_like_show_help:hover span {
+        display: block;
+    }
+    .mihanblog_like_help_text {
+        background-color: white;
+        border: 1px solid #555555;
+        border-radius: 3px 3px 3px 3px;
+        color: #303030;
+        float: left;
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px;
+    }
+
+    .mihanblog_like_help_arrow_dislike {
+        background: url("/public/public/images/icons/like_hover_top.png") no-repeat scroll 16px 0 transparent;
+        left: 0;
+        top: -4px;
+    }
+
+    .mihanblog_like_help_arrow_like {
+        background: url("/public/public/images/icons/like_hover_top _2.png") no-repeat scroll 16px 0 transparent;
+        left: -10px;
+        top: 29px;
+    }
+
+    .mihanblog_like_help_arrow{
+        height: 6px;
+        position: absolute;
+        width: 100px;
+
+    }
+
+    .mihanblog_like_v2_help_dislike {
+        left: -15px;
+        top: 24px;
+    }
+    .mihanblog_like_v2_help_like {
+        left: 0;
+        top: -35px;
+
+    }
+    .mihanblog_like_v2_help{
+        display: none;
+        position: absolute;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    .mihanblog_like_Cnt{
+        display: inline;
+        color: #ffffff;
+    }
+
+</style><script>
+
+	statInfo = new Array();
+	setStatVar = function(index,value){
+		statInfo[index] = value;
+	}
+	getStatVar = function(index){
+		if(statInfo[index]) document.write(statInfo[index]);
+	}
+	
+	setStatVar('total_post','1019');
+	setStatVar('total_author','0');
+	setStatVar('modify_date','29 شهریور 99');
+	
+	setStatVar('today_view','382');
+	setStatVar('yesterday_view','444');
+	
+	setStatVar('this_month_view','13804');
+	setStatVar('last_month_view','12326');
+
+	setStatVar('total_view','5897699');
+	setStatVar('last_view_date','9 آذر 99 (01:32)');
+
+
+
+    
+    function setStatFromClient()
+    {
+        var url = 'http://dr_ahmadi.mihanblog.com/statupdate/?data[refereruri]=http://dr_ahmadi.mihanblog.com/post/category/11/page/6&data[postid]=&data[requesturi]=/post/category/11/page/10&data[sdate]=1606600999&data[hash]=fcf9f11c2ea1dbc17d3cde56660ac96f&data[resolution]='+screen.width+' X '+screen.height;
+
+//        alert(url);
+//        var newjs = document.createElement("SCRIPT");
+//        newjs.type = 'text/javascript';
+//        newjs.src = url;
+//
+//        var newdiv = document.createElement("DIV");
+//        newdiv.setAttribute("style","display:none");
+
+        document.write(unescape('%3Cscript src="'+url+'" type="text/javascript"%3E%3C/script%3E'));
+//        newdiv.appendChild (newjs);
+//        document.write(newjs);
+//        document.write(appendChild (newdiv);
+
+    };
+    setStatFromClient();
+        
+</script><script>
+	messageForm = function(post_id){
+		try{
+			window.open('/message','message','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=480px,height=550px');
+		} catch(e){}
+	}
+</script><script>
+	linkdailyForm = function(){
+		try{
+			window.open('/linkdaily/new','linkdaily','status=yes,scrollbars=yes,toolbar=no,menubar=no,location=no ,width=500px,height=460px');
+		} catch(e){}
+	}
+</script><script>
+
+var MihanblogShopAdsArray = new Array();
+
+function GetMihanBlogShowAds(){
+	if(MihanblogShopAdsArray.length){
+		var adsTarget = 'MihanblogShopAds';
+		var containerWidth = document.getElementById(adsTarget).offsetWidth;
+		if(containerWidth>=200){
+			var adsCnt = parseInt(containerWidth / 200) ;
+			if(adsCnt>MihanblogShopAdsArray.length){
+				adsCnt = MihanblogShopAdsArray.length ; 
+			}
+//			var OneAdsWidth = parseInt(containerWidth / adsCnt) ;
+			var OneAdsWidth = containerWidth / adsCnt ;
+			if(OneAdsWidth>400){
+				OneAdsWidth = 400 ;
+			}
+			var OutHtml = '';
+			var img = '';
+			var link = '';
+			var title = '';
+			var description = '';
+			var imgWidth = 70;
+			if(OneAdsWidth>230){
+				imgWidth = 80;
+			}
+			if(OneAdsWidth>300){
+				imgWidth = 90;
+			}
+			for(adsOne=0;adsOne<adsCnt;adsOne++){
+				
+				img = MihanblogShopAdsArray[adsOne]['img'];
+				link = MihanblogShopAdsArray[adsOne]['link'];
+				title = MihanblogShopAdsArray[adsOne]['title'];
+				description = MihanblogShopAdsArray[adsOne]['description'];
+				
+				OutHtml += '<td style="background-color:#FFF;width: '+OneAdsWidth+'px;border:1px solid #f00;margin:0px 0px;font-size:11px;font-family:tahoma;padding:2px;margin:0px 0px;font-size:11px;border: 1px solid BurlyWood; padding: 1px; height: '+(imgWidth+25)+'px;">';
+
+				OutHtml += '	<a href="http://dr_ahmadi.mihanblog.com/post/category/11/page/'+link+'" target="_blank" style="text-decoration:none">';
+
+				OutHtml += '			<div style="width: '+(OneAdsWidth-16)+'px;cursor:pointer;font-size:12px;padding: 4px 1px 4px 7px; white-space: nowrap; text-align: center; font-weight: bold; color: blue;white-space:nowrap;overflow:hidden">';
+				OutHtml += 					title;
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="cursor:pointer;padding: 1px; display: block; float: right; width: '+imgWidth+'px;">';
+				OutHtml += '				<img src="http://dr_ahmadi.mihanblog.com/post/category/11/page/'+img+'" style="border:0px;padding:0px;margin:0px;width:'+imgWidth+'px;height:'+imgWidth+'px;">';
+				OutHtml += '			</div>';
+				OutHtml += '			<div style="padding: 1px; display: block; float: right; width: '+(OneAdsWidth-13-imgWidth)+'px; text-align: right;overflow:hidden">';
+				OutHtml += '				<div style="overflow:hidden;cursor:pointer;padding: 2px 3px; line-height: 17px; height: '+(imgWidth-3)+'px; text-align: justify;color:#000;direction:rtl">';
+				OutHtml += 						description;
+				OutHtml += '				</div>';
+				OutHtml += '			</div>';
+
+				OutHtml += '	</a>';
+
+				OutHtml += '</td>';
+			}
+			
+			var Out = '<table align="center" cellpadding="0" cellspacing="2" style="width:'+(OneAdsWidth*adsCnt)+'px;"><tr>'+OutHtml+'</tr></table>'; 
+			
+			Out = '<div style="text-align:center;padding:0px;margin:3px auto;">'+Out+'</div>'; 
+			
+			document.getElementById(adsTarget).style.height = (imgWidth+35)+'px' ;
+			document.getElementById(adsTarget).innerHTML = Out ;
+		}
+	}
+}
+</script>
+    <style>
+        @font-face {
+            font-family: 'Mihan-Iransans';
+            src: url('/public/public/fonts/Iransans.eot');
+            src: url('/public/public/fonts/Iransans.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Iransans.woff2') format('woff2'),
+            url('/public/public/fonts/Iransans.woff') format('woff'),
+            url('/public/public/fonts/Iransans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansBold';
+            src: url('/public/public/fonts/Iransans-Black.eot');
+            src: url('/public/public/fonts/Iransans-Black.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Iransans-Black.woff2') format('woff2'),
+            url('/public/public/fonts/Iransans-Black.woff') format('woff'),
+            url('/public/public/fonts/Iransans-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-IransansLight';
+            src: url('/public/public/fonts/Iransans-UltraLight.eot');
+            src: url('/public/public/fonts/Iransans-UltraLight.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Iransans-UltraLight.woff2') format('woff2'),
+            url('/public/public/fonts/Iransans-UltraLight.woff') format('woff'),
+            url('/public/public/fonts/Iransans-UltraLight.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Nassim';
+            src: url('/public/public/fonts/Nassim.eot');
+            src: url('/public/public/fonts/Nassim.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Nassim.woff2') format('woff2'),
+            url('/public/public/fonts/Nassim.woff') format('woff'),
+            url('/public/public/fonts/Nassim.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Koodak';
+            src: url('/public/public/fonts/Koodak.eot');
+            src: url('/public/public/fonts/Koodak.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Koodak.woff2') format('woff2'),
+            url('/public/public/fonts/Koodak.woff') format('woff'),
+            url('/public/public/fonts/Koodak.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Mihan-Yekan';
+            src: url('/public/public/fonts/Yekan.eot');
+            src: url('/public/public/fonts/Yekan.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/Yekan.woff2') format('woff2'),
+            url('/public/public/fonts/Yekan.woff') format('woff'),
+            url('/public/public/fonts/Yekan.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'FontAwesome';
+            src: url('/public/public/fonts/fontawesome_webfont.eot');
+            src: url('/public/public/fonts/fontawesome_webfont.eot?#iefix') format('embedded-opentype'),
+            url('/public/public/fonts/fontawesome_webfont.woff2') format('woff2'),
+            url('/public/public/fonts/fontawesome_webfont.woff') format('woff'),
+            url('/public/public/fonts/fontawesome_webfont.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        
+
+        /* Smartphones (portrait and landscape) ----------- */
+
+        /*
+        @media only screen and (max-width : 480px) and (min-width : 320px) {
+            .sabaClick_advert__wrapper{
+                display:block;
+            }
+            .sabaClick_advert__inner{
+                max-width: 90%;
+                margin: 0 5%;
+            }
+        }
+        */
+
+    </style>
+
+
+
+
+
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="Theme Designer" content="www.MyTheme.ir">
+
+    <meta name="description" content=""/>
+    <meta name="keywords" content="شعر,موسیقی,داستان"/>
+    <link rel="alternate" type="application/rss+xml" title="وب نوشته های یك جراح" href="../../../rss/rss.html" />
+    <link rel="alternate" type="application/atom+xml" title="وب نوشته های یك جراح" href="../../../atom/atom.html" />
+    <link href="../../../../public/public/user_data/template/2099141/style.css" type="text/css" rel="stylesheet">
+
+    <title>وب نوشته های یك جراح - مطالب طنز نوشته های من</title>
+</head>
+
+<body>
+
+<div align="center">
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td class=div02>&nbsp;</td>
+<td class=div70 valign=top><div class=div71></div></td>
+
+<td class=div2 valign=top>
+<div class=div1>
+
+<div class=div20>
+
+    		<div id="MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div>
+		<div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/407">دیروز...امروز</a></font></div>
+            <div class=div58><font class=text7>26 مرداد 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><div id="InPost_MihanblogShopAds" style="display:block;height:0px;width:100%;border:0px"></div><P style="TEXT-ALIGN: justify; unicode-bidi: embed; DIRECTION: rtl" dir=rtl class=MsoNormal><FONT class=Apple-style-span color=#cc0000 face="tahoma, arial, helvetica, sans-serif"><FONT size=2><SPAN lang=AR-SA>منه دیروز</SPAN><SPAN dir=ltr></SPAN><SPAN dir=ltr><SPAN dir=ltr></SPAN> :</SPAN></FONT></FONT></P>
+<P style="TEXT-ALIGN: justify; unicode-bidi: embed; DIRECTION: rtl" dir=rtl class=MsoNormal><FONT size=2><FONT class=Apple-style-span face="tahoma, arial, helvetica, sans-serif"><SPAN lang=AR-SA>هر هفته شب شعری بود . لااقل 2-3 ماهی یکبار شعری از مغزم تراوش میکرد . رمان می خوندم.گیتارم دوست جدا&nbsp;</SPAN></FONT><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span>نشدنیم بود . آهنگ میساختم و می خوندم . خوشنویسی میکردم و بعضی وقت ها به یاد ایام جوانی کاریکاتوری&nbsp;</SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span>بدون شرح میکشیدم (از همان هایی که سر از کمیته انضباطی درآوردم ). قبل از خواب به طرح یک داستان فکر میکردم&nbsp;</SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span><SPAN lang=AR-SA>و بعضی وقت ها موضوع داستان رو تو گوشی</SPAN><SPAN dir=ltr></SPAN><SPAN dir=ltr><SPAN dir=ltr></SPAN> Imate</SPAN><SPAN lang=AR-SA>م (که آن دوران ارج و قربی داشت ) یادداشت میکردم . همیشه&nbsp;</SPAN></SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span>پیش خودم فکر میکردم خوب یه روز میرسه که اون همه ماکت آهنگی رو که ساختم تکمیل کنم این چند تا داستانی&nbsp;</SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span>رو که تو ذهنمه کامل کنم . می خواستم ویولن رو شروع کنم . با یکی دو تا از دوستان می خواستیم یه گروه موسیقی&nbsp;</SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span>درست کنیم و یادش به خیر توچال ... دربند...فرحزاد</SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; unicode-bidi: embed; DIRECTION: rtl" dir=rtl class=MsoNormal><FONT class=Apple-style-span color=#cc0000 face="tahoma, arial, helvetica, sans-serif"><FONT size=2><SPAN lang=AR-SA>منه امروز</SPAN><SPAN dir=ltr></SPAN><SPAN dir=ltr><SPAN dir=ltr></SPAN>:</SPAN></FONT></FONT></P>
+<P style="TEXT-ALIGN: justify; unicode-bidi: embed; DIRECTION: rtl" dir=rtl class=MsoNormal><FONT size=2><SPAN lang=AR-SA><FONT class=Apple-style-span face="tahoma, arial, helvetica, sans-serif">هر روز باید دوش بگیرم . حتما یه نقطه ای از بدنم خونی شده . اگرم ندیدم دلیل بر نبودنش نیست مثل هزارن بار قبلی&nbsp;</FONT></SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span><SPAN lang=AR-SA>نفهمیدم . وسائل خوشنویسیمو با خودم آورده بودم پاوی</SPAN><SPAN lang=FA>و</SPAN><SPAN lang=AR-SA>ن ولی تا حالا بهش دست نزدم فکرکنم مرکبش خشک شده..گیتی&nbsp;</SPAN></SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span><SPAN lang=AR-SA>خانم (اسم گیتارمه ) هم از دستم کلی شاکیه</SPAN><SPAN dir=ltr></SPAN><SPAN dir=ltr><SPAN dir=ltr></SPAN> ...</SPAN></SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span><SPAN lang=AR-SA>این ها همه به کنار از شما چه پنهون یه روز خون نبینم حالم بد میشه دارم یه چیزی تو مایه های</SPAN><SPAN dir=ltr></SPAN><SPAN dir=ltr><SPAN dir=ltr></SPAN> vampire </SPAN><SPAN lang=AR-SA>میشم</SPAN><SPAN dir=ltr></SPAN><SPAN dir=ltr><SPAN dir=ltr></SPAN> .</SPAN></SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span>موقعی که راه میرم همش به شکم آدما نگاه میکنم .آدمای چاق . آدمای لاغر. پیش خودم حساب میکنم چه جوری&nbsp;</SPAN><SPAN style="FONT-FAMILY: tahoma, arial, helvetica, sans-serif; FONT-SIZE: small" class=Apple-style-span><SPAN lang=AR-SA>شکمش رو باز کنم</SPAN><SPAN dir=ltr></SPAN><SPAN dir=ltr><SPAN dir=ltr></SPAN> .</SPAN></SPAN></FONT></P>
+<P style="TEXT-ALIGN: justify; unicode-bidi: embed; DIRECTION: rtl" dir=rtl class=MsoNormal><FONT size=2><SPAN lang=AR-SA><FONT class=Apple-style-span face="tahoma, arial, helvetica, sans-serif"><B>راستی شما چاق هستین یا لاغر ؟؟؟ &nbsp;</B></FONT></SPAN><IMG border=0 hspace=0 alt="" align=top src="http://www.smilehaa.org/uploads/Smiles/Red_Flame/rf1.gif"></FONT></P>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;<a href="../../4.htm" class=text4>روز نوشت</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/407#commentlist">نظرات (<script>setCommentCnt(407)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('407','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/406">خواب , رویای نیمه تمام</a></font></div>
+            <div class=div58><font class=text7>26 مرداد 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+
+<p align="justify"><font size="2">فکر کن دیشب تا ساعت 2 بیدار بودی بعد از خستگی با شلوار جین و کفش افتادی رو تخت تا صبح بیهوش شدی اونوقت ساعت 6 صبح یه نره خر یابو علفی با اون صدای انکرش&nbsp; داد بزنه . <br>پاشو پاشو کوچولو <br>آفتــــاب زده دوباره&nbsp;<img style="WIDTH: 76px; HEIGHT: 55px" alt="" src="http://www.laymark.com/i/cz/cz04.gif" align="top" border="0" height="58" hspace="0" width="81"></font></p>
+
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/406#commentlist">نظرات (<script>setCommentCnt(406)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('406','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/405">راه های شناخت رزیدنت جراحی</a></font></div>
+            <div class=div58><font class=text7>25 مرداد 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div style="text-align: justify;"><font size="2">وقتی میرین تو بیمارستان دولتی و آموزشی انسان های روپوش به تنهای زیادی رو میبینین و اگر خدای نکرده کارتون افتاد به سرویس جراحی&nbsp; خوب شما باید توسط رزیدنت محترم جراحی ویزیت بشین خوب تو این مدت انتظارتون هی روپوش سفید میاد شما رو معاینه میکنه بعدم میگن ما جراح نیستیم من چند تا نشونه به شما معرفی میکنم که شما بتونین این جماعت رو وسط این همه روپوش سفید بشناسین</font><br><font size="2">نیگا کنین هر کدومشون دکمه های روپوششون بازه احتمالا اونا جراحن</font><br><font size="2">نیگا کنین هر کدومشون موهاشون شونه نشده انگار تازه از خواب بیدار شدن اونا رزیدنت جراحین</font><br><font size="2">نیگا کنین هر کدومشون یه دایره قرمز رو پیشونیشونه و نشون میده یارو دستشو مشت کرده گذاشته زیر پیشونیشو احیانا پشت میزی چیزی چرت زده اونا رزیدنت جراحین </font><br><font size="2">نیگا کنین هر کدومشون داره داد و بیداد میکنه "مگه من نگفتم آزمایشای این مریض سریع آماده بشه "اون رزیدنت جراحیه</font><br><font size="2">نیگا کنین هر کدومشون گوشی موبایل دائم در گوششه داره با این و اون هماهنگ میکنه اون رزیدنت جراحیه</font><br><font size="2">خلاصه.. هیچ کی مثل رزیدنت جراحی نیست که هم هست هم نیست اصولا رزیدنت جراحی مثل خورشید پشت ابر میمونه شاید نبینیش ولی از برکات حضورش همه بهره میبرن</font><br><font style="font-weight: bold; color: rgb(255, 0, 0);" size="2">شما راهی به نظرتون میرسه</font><font style="color: rgb(255, 0, 0);" size="2"><span style="font-weight: bold;">؟؟</span></font><br><br></div>
+
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/405#commentlist">نظرات (<script>setCommentCnt(405)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('405','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/393">سال دو شدیم </a></font></div>
+            <div class=div58><font class=text7>8 مرداد 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><P align=justify><FONT size=2>با عرض معذرت بابت تاخیر سیستم میهن بلاگ کلا رو اعصاب من رفته و این چند روز نتونستم آپ کنم در هر صورت این امتحان ارتقا هم به سلامت از سر ما گذشت و اما داستانش <BR>جونم براتون بگه که&nbsp;5 شنبه ساعت 9 امتحان شروع شد و اول تلاوت قرآن انجام شد و بعدش همون صدای معروف اومد تو بلند گو که <BR><STRONG><FONT color=#ff0000>داوطلبان عزیز با سلام و آرزوی موفقیت برای شما لطفا ..<BR></FONT></STRONG>هنوز این لطفا از دهنش در نیومده بود که من پرسشنامه رو از روی زمین قاپیدم که ادامه داد<BR><STRONG><FONT color=#ff0000>با سلام و آرزوی موفقیت برای شما لطفا به صحبت های خانم فلانی گوش بدید . <BR></FONT></STRONG>یعنی اینو که گفت سالن از صدای خنده منفجر شد ..یعنی این دیگه آخرش بود من که مثل مجسمه خشکم زده بود داشتم دور و برمو نیگا می کردم که دیدم بعضیا not only به سخنان خانم فلانی گوش نمیدن but also دارن سوالاتو جواب میدن که ما هم در کثری از ثانیه با دوستان همراه شدیم ..خلاصه امتحان رو دادیم و یک ساعت بعدش هم جوابا رو زدن تو سایت دونه به دونه با دلهره جواب دادیم و.... خـــــــــــــــــلاصه شدیم سال دویــــــــــی..حالا ..<BR>میهن بلاگیا دس س س <BR>بلاگفاییا رقص ص ص ص <BR>بلاگ اسکاییا شلــــــــــه&nbsp;&nbsp;&nbsp; <IMG border=0 hspace=0 alt="" align=top src="http://www.laymark.com/i/cz/cz27.gif"><BR></P></FONT>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;<a href="../../7.htm" class=text4>خاطرات من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/393#commentlist">نظرات (<script>setCommentCnt(393)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('393','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/387">یک اشتباه کاملا بچگانه</a></font></div>
+            <div class=div58><font class=text7>25 تیر 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><font class="Apple-style-span" size="2">یعنی ما دو ساعت تموم وقت گذاشتیم<br>&nbsp;انرژی صرف کردیم <br>کشتیم خودمونو <br>فرهنگ سازی کردیم <br>با آرامش آموزش دادیم <br>هی گفتیم بابا بچس خوب اشتباه میکنه<br>&nbsp;هی از خودمون خویشتن داری ول کردیم&nbsp;<br>مگه اعصاب میزاره واسه آدم باز بزگشته میگه&nbsp;<br><b>حبه منگول</b> کجا قایم شده بود که آقا گرگه ندیدش</font><img hspace="0" border="0" align="top" vspace="0" src="http://www.laymark.com/i/cz/cz01.gif" alt="">                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/387#commentlist">نظرات (<script>setCommentCnt(387)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('387','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/385">آرایشگر</a></font></div>
+            <div class=div58><font class=text7>23 تیر 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><P><FONT size=2><STRONG>"سرم را سرسری متراش ای استاد سلمانی"<BR></STRONG>پول دادم ..<BR>مجانی که نمیزنی<BR>مثل آدم کوتاش کن <BR>با شمشادای پارک لاله اشتباه گرفتی&nbsp; <IMG border=0 hspace=0 alt="" align=top src="../../../../icons.iconarchive.com/icons/bad-blood/yolks/128/yuush-icon.png" width=87 height=85></FONT></P>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/385#commentlist">نظرات (<script>setCommentCnt(385)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('385','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/379">صاعقه یا ساعقه مسئله این است</a></font></div>
+            <div class=div58><font class=text7>11 تیر 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><P align=justify><FONT size=2>در پست قبلی 99 درصد دوستان کامنت گذاشتن که چرا بنده نوشتم ساعقه و درستش صاعقه هستش عارضم به حضور انورگون شما که ببینین ما یه صاعقه داریم که همینه و با صاد مینویسن این خیلی چیز مهمی نیست و اصولابیشتر برای سرگرمی استفاده میشه و ازش عکس میگیرن و خلاصه والپیپرش میکنن و اصلا هم ترس نداره اصلاشما اگه مثل بنده حقیر خیلی تو نخ این حرف صاد برین میبینین که یه حرف منعطفیه و نیگاه اصلا خم شده و صداش هم در نمیاد . خوب حالا خدا وکیلی این صاعقه ترس داره ..نداره دیگه اصلا صدا خفه کن داره ..آمّما این نانجیب ساعقه که من نوشتم ببینین چه ظاهر خشنی داره اصلا این 3 تا دندونش آدم رو یاد فرشته مرگ میندازه خود این حرف سین رو نیگا خیلی خشنه اصلا لطافت نداره <BR><STRONG>نتیجه گیری :</STRONG>وقتی صحبت از عذاب آسمانی و ترس و وحشت از حوادث غیر مترقبه پیش بیاید باید صاعقه رو با سین بنویسیم..<BR><STRONG>یه وقت فکر نکنین ما دکطر بی ثوادی هستیم <IMG border=0 hspace=0 alt="" align=top src="http://www.laymark.com/i/cz/cz34.gif"></STRONG></FONT></P>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/379#commentlist">نظرات (<script>setCommentCnt(379)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('379','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/377">معتاد شدم</a></font></div>
+            <div class=div58><font class=text7>7 تیر 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><P align=justify><FONT size=2>عارضم که ما در یک اقدام متحورانه و دشمن شکن دیشب از ساعت 11 تا 4 صبح نشستیم ورژن جدید <A title="" href="http://www.getgek.com/wp-content/uploads/2011/02/Angry-Bird-Cartoon.jpg" target=_blank><FONT color=#ff0000>angry birds</FONT></A> رو تا مرحله آخرش بازی کردیم و نکته بامزش این بود که ما خیر سرمون کشیک آنکال بخش بودیم و کسی هم به ما زنگ نزد و واضح و مبرهن است که : <BR>درسته که ما سال یک جراحی هستیم و یک ساعت خواب رویای دست نیافتنیست <BR>و <BR>درسته که ما خیر سرمون باید یه ماه دیگه امتحان ارتقا بدیم <BR>و <BR>درسته که دیگه ما خیلی وقته پفک نمیخوریم و اینا مال بچه هاست <BR>آمــّــا ( با لهجه ترکی بخونید)<BR>بازی که تو 10 روز 10 میلیون بار دانلود شده خدا وکیلی وسوسه کننده نیست . البته ما خودمون میدونیم که این کار کار اینگلیساس ولی گفتیم اقلا پوز بعضیا رو هم بزنیم که واسه ما رکورد نرنن<BR><STRONG>به هیچ وجه طرف این بازی نرین بی شرف مثل مواد افیونی میمونه</STRONG></FONT></P>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/377#commentlist">نظرات (<script>setCommentCnt(377)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('377','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/368">ماجرای یک ناهار</a></font></div>
+            <div class=div58><font class=text7>21 خرداد 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4><P align=justify><FONT size=2><IMG border=0 hspace=0 alt="" align=right src="http://png-4.findicons.com/files/icons/9/farm/128/chicken.png">تصور کن اگه حتی تصور کردنش سخته که اتاق عمل ساعت 5 بعدازظهر تموم شده و شما درب و داغون اومدی پاویون که مثلا ناهار بخوری . خوب قطعا جماعت رزیدنت که تا اون موقع چیزی واسه شما باقی نذاشتن و اگه خوش شانس باشی مسئول پاویون هم دلش به حالت بسوزه ممکنه یه چیزایی برات پیدا کنه مثل امروز که یه ظرف یه بار مصرف حاوی یک عدد سینه مرغ با مقادیری زرشک پلو به ما رسید که از قیافه مرغه معلوم بود که یه 50 سالی رو شیرین داشته و بعد مرحوم شده خلاصه یه ذره به چیزای خوب فکر کردیم و بعد دستی شستیم و&nbsp;بعدش دیدیم ای دل غافل حالا با چی بخوریم اینو ..قاشق از کجا بیاریم این موقع روز ...خلاصه رفتیم اتاق و یه قاشق رو که ما دیشب جهت تناول کردن هات چاکلت استفاده کرده بودیم و هنوز در لیوان مونده بود رو برداشتیم و با مقادیر فراوانی آب جوش شستیم . البته لازم به تذکر است که هات چاکلت مال غصبی بود و ما از یه بنده خدایی بلند کردیمخلاصه دوان دوان رفتیم سراغ مرغه و چشتون روز بد نبینه هر چی این قاشق یه بار مصرفه رو فرو میکنیم تو مرغه قاشقه قوس بر میداره تو مرغه فرو نمیره ..از بس با آب جوش قاشقو رو شسته بودم اصلا شل شل شده بود البته مرغه هم همچین بی تقصیر نبود ..خلاصه جونم براتون بگه که دیدیم اینجوری فایده نداره و عنقریبه که بنده از فرط گرسنگی غش کنم لذا گفتیم گور بابای کلاس و ازین حرفا مثل اجداد غارنشینمون با دو دست خدمت مرغه رسیدیم..</FONT></P>                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/368#commentlist">نظرات (<script>setCommentCnt(368)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('368','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div><div class=div54>
+        <div class=div15>
+            <div class=div015></div>
+            <div class=div018><img border="0" src="../../../../public/public/user_data/template/2099141/blank.gif" width="20" height="3"></div>
+            <div class=div18><font class=text6><a href="http://dr_ahmadi.mihanblog.com/post/361">ته امکانات</a></font></div>
+            <div class=div58><font class=text7>4 خرداد 90 :: نویسنده : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div>
+        <div class=div21>
+            <div class=div55></div>
+            <div class=div56><font class=text4>
+<div style="text-align: justify;"><font size="2">اصولا واضح و مبرهن است که هیچ جای دنیا مثل ما امکانات ندارن مثلا همین پاویون ما هر روز میان وسایل اتاق رو عوض میکنن ..دکوراسیونشو طبق سلیقتون عوض میکنن ..جدیدا اومدن یکسری روکش دادن که آپشن دار هستش و شما بر حسب سلیقتون می تونین یه قسمت از پاتون رو از وسطش رد کنین تا حوصلتون سر نره </font><a style="color: rgb(255, 0, 0);" href="http://s1.picofile.com/file/6711648888/myfoot.jpg" target="_blank" title=""><span style="font-weight: bold;">اینم عکسش</span></a><font size="2"><span style="font-weight: bold;"></span> .. البته ممکنه رسانه های بیگانه عنوان کنند که این عکسها فتوشاپیه و ایران به علت تحریم ها فاقد همچین امکاناتی می باشد که این نشانه ی عزم راسخ فرزندان میهن در تبدیل کردن تحریم ها به فرصت می باشد..لازم به ذکر است در این نوع روکش هابر حسب سلیقه&nbsp; شما میتونین شست پای چپ یا راست یا کل یه پاتون رو از سوراخ تعبیه شده بیرون بزارین..البته دوستان سعی کنن به امکاناتی که ما داریم حسودی نکنن خوب&nbsp; بالاخره ما کلی درس خوندیم و به قولی دود چراغ خوردیم تا به اینجا رسیدیم و خلاصه حق مسلم ماست
+
+
+</font></div>
+
+                <BlogExtendedPost><br><br><b></b></BlogExtendedPost>
+                <br><br><font color="#CC0000">نوع مطلب :</font>
+                <a href="../../11.htm" class=text4>طنز نوشته های من</a>،&nbsp;                <br><font color="#CC0000">برچسب ها :</font>
+                                <br><font color="#CC0000">لینک های مرتبط :</font>
+                            </font><br>
+
+
+                <br>
+
+
+
+
+
+
+
+            </div></div>
+        <div class=div26>
+            <div class=div27><font class=text8><a href="http://dr_ahmadi.mihanblog.com/post/361#commentlist">نظرات (<script>setCommentCnt(361)</script>)</a></font></div>
+            <div style="float: left; margin-left: 43px; margin-top: -2px;"><script>mihanblogPostLike('361','like')</script></div>
+
+        </div>
+        <style>
+
+
+
+
+            .clearfix {display: inline-block;}
+            .clearfix:after {
+                content: ".";
+                display: block;
+                height: 0;
+                clear: both;
+                visibility: hidden;
+            }
+
+
+
+
+            .cblike{
+                margin:4px 0px;
+                float: left;
+            }
+            .cblike a {
+                float:left;
+                padding:3px;
+                text-align:center;
+                font-size:12px;
+                color:#FFF;
+                display:block;
+                line-height:15px;
+                text-decoration: none;
+            }
+
+
+
+
+            .cblike a.clike_plus {
+                background-color:#009900 ; /*green #039B03*/
+
+                border-radius: 5px ;
+
+                border-top-right-radius: 0px;
+                border-bottom-right-radius: 0px;
+
+                /*border:1px solid green;
+                border-right:0px;*/
+            }
+            .cblike a.clike_minus {
+                background-color:#CC0000;
+                border-radius: 5px ;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+
+                /*border:1px solid red;
+                border-left:0px;*/
+            }
+            .cblike a.clike_minus:hover {
+                background-color:red;
+                text-decoration: none;
+            }
+            .cblike a.clike_plus:hover {
+                background-color:green;
+                text-decoration: none;
+            }
+            .cblike a span{
+                font-weight:bold;
+                font-size:13px;
+
+                color:#fff;
+            }
+
+
+
+
+            .text100 , .text100 a{color:#FFF; font-size:8pt;-moz-text-shadow: #444 1px 1px 0px;-webkit-text-shadow: #444 1px 1px 0px;text-shadow: #444 1px 1px 0px;}
+            .text101 , .text101 a{color:#444444; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+            .text102 , .text102 a{color:#000; font-size:8pt;-moz-text-shadow: #fff 1px 1px 0px;-webkit-text-shadow: #fff 1px 1px 0px;text-shadow: #fff 1px 1px 0px;}
+
+            .com{ width:480px; float:left; background:#e6e6e6; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 0px 7px 0px 15px; padding:0 0 10px 0;}
+            .com1{ width:462px; float:left; background:#940e0d; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 10px 20px 0 10px; padding:0 0 3px 0;}
+            .com3{ width:235px; float:left; text-align:right; direction:rtl; line-height:27px;}
+            .com2{ width:190px; float:left; height:30px; text-align:left; direction:rtl; line-height:27px; padding-left:10px; opacity:0.6;}
+            .com4{ width:442px; float:left; background:#FFF; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow: inset #444 0px 0px 5px;-webkit-box-shadow:inset  #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com5{ width:442px; float:left; background:#cfcfcf; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin:  3px 3px 0 3px; padding: 7px; direction:rtl; text-align:right; -moz-box-shadow:inset  #444 0px 0px 5px;-webkit-box-shadow: inset #444 0px 0px 5px;box-shadow: inset #444 0px 0px 5px;}
+            .com6{ width:452px; float:left; background:#fff; -webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px; margin: 5px 20px 0 10px; padding: 5px 5px 5px 5px; direction:rtl; }
+            .com7{width:25px; padding:5px 0 0 0; float:right; text-align:center;}
+        </style>
+        
+    </div>
+    <div class=div29></div>
+    <div class=div28><font class=text4>
+                <br><br>
+        ( کل صفحات : 13 )&nbsp;&nbsp;&nbsp;
+            <a href="6.htm" class=text4><i>...</i></a>&nbsp;&nbsp;&nbsp;<a href="7.htm" class=text4><span>7</span></a>&nbsp;&nbsp;&nbsp;<a href="8.htm" class=text4><span>8</span></a>&nbsp;&nbsp;&nbsp;<a href="9.htm" class=text4><span>9</span></a>&nbsp;&nbsp;&nbsp;<a href="10.htm" class=text4><b>10</b></a>&nbsp;&nbsp;&nbsp;<a href="11.htm" class=text4><span>11</span></a>&nbsp;&nbsp;&nbsp;<a href="12.htm" class=text4><span>12</span></a>&nbsp;&nbsp;&nbsp;<a href="http://dr_ahmadi.mihanblog.com/post/category/11/page/13" class=text4><span>13</span></a>&nbsp;&nbsp;&nbsp;    </font>
+    </div>
+</div>
+
+<div class=div17>
+
+    <div class=div60>
+        <div class=div101>
+            <div class=div10><font class=title>وب نوشته های یك جراح</font></div></div>
+        <div class=div11>
+            <div class=div12><font class=des>وبلاگ دکتر حمید احمدی</font></div></div>
+    </div>
+
+    <form id="frm-16064673005fc0bee4586b8" method="get" action="http://dr_ahmadi.mihanblog.com/post/search/fid/16064673005fc0bee4586b8"  onsubmit="window.open('', 'search', 'toolbar=0,location=0,status=0,menubar=0,scrollbars=1,resizable=0,width=400,height=310')" target="search"> <div class=div80>
+        <div class=div81></div>
+        <div class=div37>
+            <input type="text" name="search_text" size="25" style="border: 0px none; background: none; font-family:Tahoma; font-size:9pt; color:#FFFFFF"></div>
+        <div class=div38>
+            <input type="image" src="../../../../public/public/user_data/template/2099141/blank.gif" width=67 height=28></div>
+    </div><input type="hidden" name="frm-id" value="16064673005fc0bee4586b8" id="frm-id" /></form>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>درباره وبلاگ</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div31><center></center><br>
+                <font class=text1><center>من یک جراح  هستم ، فارغ التحصیل رشته فلوشیپ جراحی پستان .اینجا یادداشت های روزانه منو می خونید که اکثرا ربطی به رشته تحصیلی من نداره .. دوست دارم به این فکر کنین که یه جراح هم می تونه حرفای دیگه ای غیر از رشته خشک و خشنش داشته باشه.پس لطفا ((جور دیگر )) به یادداشت های من نگاه کنین. متاسفانه به خاطر مشغله کاری نمی تونم به اکثر کامنت ها جواب بدم. لطف کنین و مرتبط با پست کامنت بزارین. و اگه سوالی غیر مرتبط دارین و دوست دارین به جوابتون برسین به 1jarrah@hotmail.com بفرستین. دیرُزود داره ولی ...(ممنون که خیلیاتون اصلا اینا رو نمی خونین)</center><br>
+                    <img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10">مدیر وبلاگ : <a href="../../../author/127594.htm">حمید احمدی</a></font></div>
+        </div><div class=div30></div>
+    </div>
+
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>مطالب اخیر</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1129.htm">آدرس مطب دکتر حمید احمدی </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1128.htm">رمان گریزها </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1127.htm">رمان &quot;دختری در قطار&quot;</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1126.htm">بنی آدم </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1125.htm">اشکال در پاسخگویی به سوالات </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1124.htm">سال نو مبارک </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1123.htm">به کرونا پناه می بریم </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1122.htm">کرونا </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1121.htm">خوره ی فیلم </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1120.htm">خطای انسانی + صداقت  </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1119.htm">پوپولیست ( داستان کوتاه )</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1118.htm">شومن کنکور هم ثبت نام کرد </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1117.htm">ماه اکتبر ماه اطلاع رسانی سرطان پستان </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1115.htm">تولد داریم چه تولدی </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1116.htm">رامبد میانسال پدر می شود </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1114.htm">برای راه اندازی سایت راهنمایی کنید </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1113.htm">دریغ از پارسال</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1112.htm">عید 98 </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1110.htm">کتاب ملت عشق </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1109.htm">یاداوری </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1108.htm">م مثل مادر </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1107.htm">انتظار ( داستان کوتاه ) </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1106.htm">برنامه ریزی زمان </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1105.htm">سرماخوردگی خر است </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1103.htm">کوروش بزرگ </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1102.htm">یه تیکه کاغذ . . . </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1101.htm">رازداری شنیده بودیم اما....</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1100.htm">امید . . .</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1099.htm">ای خوش کمر نرقصا </a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../1098.htm">در جریان باشید که . . .</a></font></div>        </div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>موضوعات</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../9.htm">آهنگ های من (9)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../16.htm">مینیمال های من (10)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../11.htm">طنز نوشته های من (130)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../2.htm">شعر های من (14)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../8.htm">خوشنویسی های من (18)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../10.htm">کتاب هایی که خوندم (44)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../12.htm">داستانهایی که نوشتم (26)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../7.htm">خاطرات من (303)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../15.htm">فیلم نوشت (13)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../6.htm">طنز های دیگران (78)</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../4.htm">روز نوشت (195)</a></font></div>        </div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آرشیو وبلاگ</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1399/6.htm"> شهریور 1399</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1399/3.htm"> خرداد 1399</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1399/2.htm"> اردیبهشت 1399</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1399/1.htm"> فروردین 1399</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1398/12.htm"> اسفند 1398</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1398/11.htm"> بهمن 1398</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1398/10.htm"> دی 1398</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1398/9.htm"> آذر 1398</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1398/7.htm"> مهر 1398</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1398/4.htm"> تیر 1398</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1398/3.htm"> خرداد 1398</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1398/1.htm"> فروردین 1398</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1397/11.htm"> بهمن 1397</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1397/9.htm"> آذر 1397</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1397/7.htm"> مهر 1397</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1397/5.htm"> مرداد 1397</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1397/4.htm"> تیر 1397</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1397/3.htm"> خرداد 1397</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1397/2.htm"> اردیبهشت 1397</a></font></div><div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive/1397/1.htm"> فروردین 1397</a></font></div>            <div class=div32><img border="0" src="../../../../public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../archive.htm">آرشیو كل مطالب</a></font></div>
+        </div><div class=div30></div>
+    </div>
+    
+    
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>نویسندگان</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="http://dr_ahmadi.mihanblog.com/post/author/127594.htm">حمید احمدی (1019)</a></font></div>        </div><div class=div30></div>
+    </div>
+    
+    
+		
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>برچسبها</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../tag/متن+ادبی_2.htm">متن ادبی</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../tag/داستان+کوتاه_2.htm">داستان کوتاه</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../tag/طنز_2.htm">طنز</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="../../../tag/داستان+طنز_2.htm">داستان طنز</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="http://dr_ahmadi.mihanblog.com/post/tag/%D8%AA%D8%B1%D8%A7%D9%88%D8%B4%D8%A7%D8%AA+%D8%B0%D9%87%D9%86%DB%8C_2.htm">تراوشات ذهنی</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="http://dr_ahmadi.mihanblog.com/post/tag/%D9%85%DB%8C%D9%86%DB%8C%D9%85%D8%A7%D9%84_2.htm">مینیمال</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="http://dr_ahmadi.mihanblog.com/post/tag/%D8%A7%D9%85%DB%8C%D8%B1+%D8%B1%D8%B6%D8%A7_2.htm">امیر رضا</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="http://dr_ahmadi.mihanblog.com/post/tag/%D9%85%D8%B9%D8%B1%D9%81%DB%8C+%DA%A9%D8%AA%D8%A7%D8%A8_2.htm">معرفی کتاب</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="http://dr_ahmadi.mihanblog.com/post/tag/%D8%AE%D8%A7%D8%B7%D8%B1%D8%A7%D8%AA+%D8%B7%D8%B1%D8%AD_2.htm">خاطرات طرح</a></font></div><div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1><a href="http://dr_ahmadi.mihanblog.com/post/tag/%D8%B9%DA%A9%D8%B3+%D8%A8%DB%8C%D9%85%D8%A7%D8%B1%D8%A7%D9%86_2.htm">عکس بیماران</a></font></div>        </div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <div class=div35>
+            <div class=div25><font class=text5>آمار وبلاگ</font></div></div>
+        <div class=div3></div>
+        <div class=div341>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>کل بازدید : <script>getStatVar('total_view');</script></font></div>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>بازدید امروز :<script>getStatVar('today_view');</script></font></div>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>بازدید دیروز : <script>getStatVar('yesterday_view');</script></font></div>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>بازدید این ماه : <script>getStatVar('this_month_view');</script></font></div>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>بازدید ماه قبل : <script>getStatVar('last_month_view');</script></font></div>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>تعداد نویسندگان : <script>getStatVar('total_author');</script></font></div>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>تعداد کل پست ها : <script>getStatVar('total_post');</script></font></div>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>آخرین بازدید : <script>getStatVar('last_view_date');</script></font></div>
+            <div class=div32><img border="0" src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/mytheme.ir_12.jpg" width="15" height="10"><font class=text1>آخرین بروز رسانی : <script>getStatVar('modify_date');</script></font></div>
+        </div><div class=div30></div>
+    </div>
+    <div class=div24>
+        <style>
+            .mihan_logo {
+                background: url("http://mihanblog.com/public/public/images/logo/poweredby.gif") no-repeat scroll center top transparent;
+                height: 131px;
+                margin-top: 10px;
+                text-align: center;
+            }</style>
+        <div class="mihan_logo"></div>
+        <center></center><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+</div>
+
+</div>
+</td>
+<td class=div01 valign=top><div class=div001></div></td>
+<td class=div02>&nbsp;</td>
+</tr>
+<tr>
+    <td class=div04>&nbsp;</td>
+    <td colspan="3" class=div4>
+        <div class=div6></div>
+        <div class=div7>
+            <a href="http://www.mytheme.ir" target="_blank">
+                <img src="http://dr_ahmadi.mihanblog.com/public/public/user_data/template/2099141/blank.gif" border=0 width=189 height=35></a></div></td>
+    <td class=div04>&nbsp;</td>
+</tr>
+</table>
+</div>
+<style>
+    img{
+        max-width : 460px;
+    }
+</style>
+</body>
+
+</html><script>
+//    setTimeout(function () {
+//        GetMihanBlogShowAds();
+//    }, 1000);
+</script>
+<!--NEW SERVER--><!--;)-->
+
+<!--SabaVision Ads Handler--><!--<script type="text/javascript">(function (d) {var url =   location.protocol+'//api.sabavision.com/pox/poxjs.js';d.write('<script type="text/javascript" src="' + url + '" async></scri' + 'pt>');})(document);</script>-->
+
+
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-153829-9']);
+    _gaq.push(['_setDomainName', 'dr_ahmadi.mihanblog.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<div id='mediaad-Kvcm'></div>
+<meta name="sabavision_zone" content="2500-Z499" />
+<center>
+    <div style="background-color:white;width:90%;padding:20px;margin-top:50px;margin-bottom:50px;">
+        <a href="https://www.cloob.com">شبکه اجتماعی فارسی کلوب</a> | <a href="https://www.seo25.com/product/buy-mobile-traffic-and-get-cheap-targeted-mobile-traffic/" target="_blank">Buy Mobile Traffic</a> | <a href="https://www.soalaat.com">سایت سوالات</a>
+    </div>
+</center>
